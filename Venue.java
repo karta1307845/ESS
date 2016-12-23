@@ -1,7 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Venue {
 	private String venueName;
 	private String venueSize;
+	private List<Facility> facility = new ArrayList<Facility>();
 
 	public Venue(String venueName, String venueSize) {
 		this.venueName = venueName;
@@ -16,8 +19,7 @@ public class Venue {
 		this.venueSize = venueSize;
 	}
 
-	public Facility getFacility(String facilityName) {
-		Facility obj = new Facility(facilityName);
-		return obj;
+	public void getFacility(Facility facilityName) {
+		facility.add(facilityName);
 	}
 }
