@@ -2,17 +2,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Timetable {
-	private String[] date;
+	private String date;
 	private String[] time;
 	private List<Event> event = new ArrayList<Event>();
 
-	public Timetable(String[] date, String[] time) {
-		this.date = date;
+	public Timetable(String[] time) {
 		this.time = time;
+		date = time[0];
 	}
 
-	public void changeDate(String date, int index) {
-		this.date[index] = date;
+	public void changeDate(String date) {
+		this.date = date;
 	}
 
 	public void changeTime(String time, int index) {

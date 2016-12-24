@@ -11,6 +11,10 @@ public class Venue {
 		this.venueSize = venueSize;
 	}
 
+	public Venue(String venueName) {
+		this(venueName, "No data");
+	}
+
 	public void changeVenueName(String venueName) {
 		this.venueName = venueName;
 	}

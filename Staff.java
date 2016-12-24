@@ -10,6 +10,10 @@ public class Staff {
 		this.staffDuty = staffDuty;
 	}
 
+	public Staff(String staffName) {
+		this(staffName, "no data", "no data");
+	}
+
 	public void changeStaffDuty(String Duty) {
 		staffDuty = Duty;
 	}

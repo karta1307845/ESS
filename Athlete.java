@@ -12,6 +12,10 @@ public class Athlete {
 		this.eventName = eventName;
 	}
 
+	public Athlete(String athleteName) {
+		this(athleteName, 20, "no data", "no data");
+	}
+
 	public void changeAthleteName(String altheteName) {
 		this.athleteName = altheteName;
 	}
