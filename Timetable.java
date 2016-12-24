@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Timetable {
-	private String date;
-	private String[] time;
+	String date;
+	String[] time;
 	private List<Event> event = new ArrayList<Event>();
 
 	public Timetable(String[] time) {

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Event {
-	private String eventName;
+	String eventName;
 	private Venue venue;
 	private List<Athlete> athlete = new ArrayList<Athlete>();
 	private List<Staff> staff = new ArrayList<Staff>();
