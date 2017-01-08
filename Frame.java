@@ -158,8 +158,8 @@ final class Frame extends JFrame {
 				int size = eventObj.timeList.size();
 				Time[] order = eventObj.sortTime(timeArray);
 
-				if (!eventObj.eventName.equals("尚未選擇") && eventObj.timeList.size() != 0) {
-					right.lab2.setText(eventObj.eventName + " 時間表");
+				if (!eventObj.eventName.equals("尚未選擇")) {
+					right.lab2.setText(eventObj.eventName + " 時間表:");
 					right.model.removeAllElements();
 
 					int game = countryArray.length / 2;
@@ -201,7 +201,7 @@ final class Frame extends JFrame {
 						right.saveBtn.setVisible(true);
 					}
 				} else {
-					right.lab2.setText("時間表");
+					right.lab2.setText("時間表:");
 				}
 			}
 		});
