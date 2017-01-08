@@ -1,25 +1,38 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Event {
+final class Event {
 	String eventName;
-	private Venue venue;
-	private List<Athlete> athlete = new ArrayList<Athlete>();
-	private List<Staff> staff = new ArrayList<Staff>();
+	List<Venue> venueList = new ArrayList<Venue>();
+	List<Time> timeList = new ArrayList<Time>();
 
-	public Event(String eventName) {
+	Event() {
+		eventName = "尚未選擇";
+	}
+
+	Event(String eventName) {
 		this.eventName = eventName;
 	}
 
-	public void getVenue(Venue venueName) {
-		venue = venueName;
+	public String toString() {
+		return eventName;
 	}
 
-	public void getAthlete(Athlete athleteName) {
-		athlete.add(athleteName);
-	}
-
-	public void getStaff(Staff staffName) {
-		staff.add(staffName);
+	Time[] sortTime(Time[] timeArray) {
+		Time[] result = new Time[timeArray.length];
+		for (int i = 0; i < timeList.size(); i++) {
+			Time timeObj = timeList.get(i);
+			for (int j = 0; j < timeArray.length; j++) {
+				if (timeObj.equals(timeArray[j])) {
+					result[j] = timeObj;
+				}
+			}
+		}
+		for (int i = 0; i < result.length; i++) {
+			if (result[i] == null) {
+				result[i] = new Time("尚未選擇");
+			}
+		}
+		return result;
 	}
 }
